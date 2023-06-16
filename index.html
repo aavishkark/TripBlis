@@ -78,7 +78,7 @@
         width: 100%;
         font-size: 50px;
     }
-  #section1 button{
+#section1 button{
   display: inline-block;
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -90,6 +90,195 @@
   transition-duration: 0.4s;
   cursor: pointer;
     }
+#section2{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+#sec2cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sec2card {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.image-text {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  transform: translate(-10%, -100%);
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  border-radius: 20px;
+}
+.image-text h2 {
+  margin: 0 0 0 3px;
+  font-size: 15px;
+  text-align: center;
+}
+.sec2card:nth-child(odd) {
+    position: relative;
+    top: -10px;
+  }
+
+.sec2card:nth-child(even) {
+    position: relative;
+    top: 10px;
+}
+#section3 h1{
+    width: 100%;
+    text-align: center;
+  }
+#sec3cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 85%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+#sec3cards img{
+     width: 20%;
+}
+.sec3card{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+#section4{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#sec4left h1{
+    font-size: 50px;
+    width: 50%;
+}
+#sec4left p{
+    font-size: 20px;
+    width: 70%;
+}
+#section5{
+   display: flex;
+   width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#sec5right>div{
+   display: flex;
+   width: 100%;
+   margin: auto;
+   justify-content: space-evenly;
+   font-size: x-large;
+   padding: 10px;
+   box-sizing: border-box; 
+}
+#sec5right>h1{
+ font-size: 60px;
+}
+#sec5left{
+  position: relative;
+}
+#sec5left > div{
+  position: relative;
+}
+#sec5left img{
+    width: 70%;
+    height: 85%;
+    position: relative;
+    z-index: 1;
+}
+#sec5guybg1{
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  background-color: #F5C94F;
+  width: 60%;
+  height: 91%;
+  z-index: 0;
+}
+.badge {
+  position: relative;
+  width: 150px;
+  border-radius: 50%;
+  transform: rotate(50deg);
+}
+p span {
+  font: 12px Monaco, MonoSpace;
+  font-weight: bold;
+  height: 60px;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  transform-origin: bottom center;
+}
+.char1 { transform: rotate(8deg); }
+.char2 { transform: rotate(16deg); }
+.char3 { transform: rotate(24deg); }
+.char4 { transform: rotate(32deg); }
+.char5 { transform: rotate(40deg); }
+.char6 { transform: rotate(48deg); }
+.char7 { transform: rotate(56deg); }
+.char8 { transform: rotate(64deg); }
+.char9 { transform: rotate(72deg); }
+.char10 { transform: rotate(80deg); }
+.char11 { transform: rotate(88deg); }
+.char12 { transform: rotate(96deg); }
+.char13 { transform: rotate(104deg); }
+.char14 { transform: rotate(112deg); }
+.char15 { transform: rotate(120deg); }
+.char16 { transform: rotate(128deg); }
+.char17 { transform: rotate(136deg); }
+.char18 { transform: rotate(144deg); }
+.char19 { transform: rotate(152deg); }
+.char20 { transform: rotate(160deg); }
+.char21 { transform: rotate(168deg); }
+.char22 { transform: rotate(176deg); }
+.char23 { transform: rotate(184deg); }
+.char24 { transform: rotate(192deg); }
+.char25 { transform: rotate(200deg); }
+.char26 { transform: rotate(208deg); }
+.char27 { transform: rotate(216deg); }
+.char28 { transform: rotate(224deg); }
+.char29 { transform: rotate(232deg); }
+.char30 { transform: rotate(240deg); }
+.char31 { transform: rotate(248deg); }
+.char32 { transform: rotate(256deg); }
+.char33 { transform: rotate(264deg); }
+.char34 { transform: rotate(272deg); }
+.char35 { transform: rotate(280deg); }
+.char36 { transform: rotate(288deg); }
+.char37 { transform: rotate(296deg); }
+.char38 { transform: rotate(304deg); }
+.char39 { transform: rotate(312deg); }
+.char40 { transform: rotate(320deg); }
+.char41 { transform: rotate(328deg); }
+.char42 { transform: rotate(336deg); }
 </style>
 <body>
     <hr>
@@ -154,6 +343,163 @@
         </div>
     </div>
     </div>
+    <div id="section2">
+        <h1>Discover the touch of Nature</h1>
+            <div id="sec2cards">
+                <div class="sec2card">
+                  <div class="card-content">
+                    <img src="./asset/tanzania.png"></img>
+                    <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Tanzania</h2>
+                      </div>
+                  </div>
+                </div>
+                <div class="sec2card">
+                  <div class="card-content">
+                    <img src="./asset/colombia.png">
+                    <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Colombia</h2>
+                      </div>
+                  </div>
+                </div>
+                <div class="sec2card">
+                    <div class="card-content">
+                      <img src="./asset/baharin.png">
+                      <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Baharin</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sec2card">
+                    <div class="card-content">
+                      <img src="./asset/mauritius.png">
+                      <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Mauritius</h2>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+    </div>
+    <div id="section3">
+        <h1>Our Features</h1>
+        <div id="sec3cards">
+            <div class="sec3card">
+                 <img src="./asset/dynamic.png"/>
+                 <h3>Dynamic Packaging</h3> 
+                 <p>Dynamic packaging is a method used in package holiday bookings to enable consumers to build their package</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/instant.png"/>
+                <h3>Instant Itinerary</h3> 
+                <p>Get a verifiable Flight and Hotel itinerary in less than 5 minutes for your next Visa travel application to the place</p>
+           </div>
+           <div class="sec3card">
+            <img src="./asset/vendor.png"/>
+            <h3>Vendor Extant</h3> 
+            <p>An integrated decision model for cloud vendor selection using...of the model are analysed by using sensitivity analysis</p>
+            </div>
+            <div class="sec3card">
+             <img src="./asset/multiple.png"/>
+             <h3>Multiple Verticals</h3> 
+             <p>A vertical, also known as a sales vertical or vertical market, is the industry that a company's offerings are specifically</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/blogging.png"/>
+                <h3> Blogging Platform</h3> 
+                <p>We recommend using a platform, such as Wix or Squarespace.Neither requires any coding knowledge and each provides</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/language.png"/>
+                <h3>Language Locales</h3> 
+                <p>A locale defines a user language and contains languages and country related parameters.Many languages</p>
+               </div>
+        </div>
+    </div>
+    <div id="section4">
+        <div id="sec4left">
+            <h1>What services we provide</h1>
+            <div>
+                <h2>01. Travel Plan</h2>
+                <p>Travel plans are not really an instrument themselves but a delivery mechanism or strategy for other mostly.</p>
+            </div>
+            <div>
+                <h2>02. Flights Booking</h2>
+                <p>Discover your next dream destination, Find deals on domestic and international flights.</p>
+            </div>
+            <div>
+                <h2>03. Accomodation</h2>
+                <p>Lodging,food, and services or traveling space and related services, Usually used in plural.</p>
+            </div>
+        </div>
+        <div id="sec4right">
+            <img src="./asset/sec4img.png"/>
+        </div>
+    </div>
+    <div id="section5">
+        <div id="sec5left">
+            <div>
+                <img src="./asset/sec5guy.png"/>
+                <div id="sec5guybg1"></div>
+            </div>
+        </div>
+        <div id="sec5right">
+            <h1>Plan easy,Play less & experience more</h1>
+            <div id="sec5rightbtm">
+                <div id="page-wrap">
+                    <p class="badge">
+                        <span class="char1">T</span>
+                        <span class="char2">h</span>
+                        <span class="char3">e</span>
+                        <span class="char4"> </span>
+                        <span class="char5">l</span>
+                        <span class="char6">a</span>
+                        <span class="char7">t</span>
+                        <span class="char8">e</span>
+                        <span class="char9">s</span>
+                        <span class="char10">t</span>
+                        <span class="char11"> </span>
+                        <span class="char12">t</span>
+                        <span class="char13">r</span>
+                        <span class="char14">v</span>
+                        <span class="char15">e</span>
+                        <span class="char16">l</span>
+                        <span class="char17"> </span>
+                        <span class="char18">n</span>
+                        <span class="char19">e</span>
+                        <span class="char20">w</span>
+                        <span class="char21">s</span>
+                        <span class="char22"> </span>
+                        <span class="char23">g</span>
+                        <span class="char24">u</span>
+                        <span class="char25">i</span>
+                        <span class="char26">d</span>
+                        <span class="char27">e</span>
+                        <span class="char28">s</span>
+                        <span class="char29"> </span>
+                        <span class="char30">v</span>
+                        <span class="char31">a</span>
+                        <span class="char32">c</span>
+                        <span class="char33">a</span>
+                        <span class="char34">t</span>
+                        <span class="char35">i</span>
+                        <span class="char36">o</span>
+                        <span class="char37">n</span>
+                        <span class="char38"> </span>
+                        <span class="char39">t</span>
+                        <span class="char40">i</span>
+                        <span class="char41">p</span>
+                        <span class="char42">s</span>
+                </p>
+                </div>
+                <p>Traveling is important in life because it will open you to a new way of living and being.You will experience
+                     new connection with people and places and immerse in different cultures,which can help widen your perspective</p>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="./asset/https://kit.fontawesome.com/6374a7542c.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/6374a7542c.js" crossorigin="anonymous"></script>
 </html>
