@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    } 
+    hr{
+        width: 90%;
+    }
+    #navbardiv{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    #contactlogo{
+        display: flex;
+    }
+    #contactlogo div{
+        font-size: xx-large;
+        align-self: center;
+    }
+    #contactlogo h3{
+        align-self: center;
+        margin-top: 9.5px;
+        margin-right: 5px;
+    }
+    #logoimg{
+        width: 40%;
+    }
+    #navmid{
+        width: 40%;
+     
+        justify-content: space-between;
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+     }
+     p{
+        margin-block-start: 0%;
+        margin-block-end: 0%;
+     }
+     div>h4:nth-child(2){
+        margin-block-start: 0%;
+        margin-block-end: 15px;       
+     }
+     hr{
+        margin-block-end: 0%;
+     }
+     div>h4:nth-child(3) {
+        margin-block-start: 0%;
+    }
+    #travelguysec{
+        display: flex;
+    }
+    #travelguyimg{
+         width: 50%;
+    }
+    #travelguysec1{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    #section1{
+        text-align: center; 
+    }
+    .options{
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .options>img{
+        width: 16%;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .options>div{
+        padding: 15px;
+        text-align: start;
+        box-sizing: border-box;
+    }
+    #section1>h1{
+        width: 100%;
+        font-size: 50px;
+    }
+#section1 button{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    }
+#section2{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  #section2 h1{
+    font-size: 50px;
+
+  }
+#sec2cards {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: auto;
+  justify-content: center;
+}
+
+.sec2card {
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.image-text {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  transform: translate(-10%, -100%);
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  border-radius: 20px;
+}
+.image-text h2 {
+  margin: 0 0 0 3px;
+  font-size: 15px;
+  text-align: center;
+}
+#section3{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.sec2card:nth-child(odd) {
+    position: relative;
+    top: -10px;
+  }
+.sec2card:nth-child(even) {
+    position: relative;
+    top: 10px;
+}
+#section3 h1{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+  }
+#sec3cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    width: 85%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+#sec3cards img{
+     width: 20%;
+}
+.sec3card{
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 25px;
+    border-radius: 15px;
+}
+#section4{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#sec4left h1{
+    font-size: 50px;
+    width: 50%;
+}
+#sec4left p{
+    font-size: 20px;
+    width: 70%;
+}
+#section5{
+   display: flex;
+   width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#sec5right>div{
+   display: flex;
+   width: 100%;
+   margin: auto;
+   justify-content: space-evenly;
+   font-size: x-large;
+   padding: 10px;
+   box-sizing: border-box; 
+}
+#sec5right>h1{
+ font-size: 60px;
+}
+#sec5left{
+  position: relative;
+}
+#sec5left > div{
+  position: relative;
+}
+#sec5left img{
+    width: 70%;
+    height: 85%;
+    position: relative;
+    z-index: 1;
+}
+#sec5guybg1{
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  background-color: #F5C94F;
+  width: 60%;
+  height: 91%;
+  z-index: 0;
+  border-radius: 15px;
+}
+.badge {
+  position: relative;
+  width: 150px;
+  border-radius: 50%;
+  transform: rotate(50deg);
+}
+p span {
+  font: 12px Monaco, MonoSpace;
+  font-weight: bold;
+  height: 60px;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  transform-origin: bottom center;
+}
+.char1 { transform: rotate(8deg); }
+.char2 { transform: rotate(16deg); }
+.char3 { transform: rotate(24deg); }
+.char4 { transform: rotate(32deg); }
+.char5 { transform: rotate(40deg); }
+.char6 { transform: rotate(48deg); }
+.char7 { transform: rotate(56deg); }
+.char8 { transform: rotate(64deg); }
+.char9 { transform: rotate(72deg); }
+.char10 { transform: rotate(80deg); }
+.char11 { transform: rotate(88deg); }
+.char12 { transform: rotate(96deg); }
+.char13 { transform: rotate(104deg); }
+.char14 { transform: rotate(112deg); }
+.char15 { transform: rotate(120deg); }
+.char16 { transform: rotate(128deg); }
+.char17 { transform: rotate(136deg); }
+.char18 { transform: rotate(144deg); }
+.char19 { transform: rotate(152deg); }
+.char20 { transform: rotate(160deg); }
+.char21 { transform: rotate(168deg); }
+.char22 { transform: rotate(176deg); }
+.char23 { transform: rotate(184deg); }
+.char24 { transform: rotate(192deg); }
+.char25 { transform: rotate(200deg); }
+.char26 { transform: rotate(208deg); }
+.char27 { transform: rotate(216deg); }
+.char28 { transform: rotate(224deg); }
+.char29 { transform: rotate(232deg); }
+.char30 { transform: rotate(240deg); }
+.char31 { transform: rotate(248deg); }
+.char32 { transform: rotate(256deg); }
+.char33 { transform: rotate(264deg); }
+.char34 { transform: rotate(272deg); }
+.char35 { transform: rotate(280deg); }
+.char36 { transform: rotate(288deg); }
+.char37 { transform: rotate(296deg); }
+.char38 { transform: rotate(304deg); }
+.char39 { transform: rotate(312deg); }
+.char40 { transform: rotate(320deg); }
+.char41 { transform: rotate(328deg); }
+.char42 { transform: rotate(336deg); }
+#section6{
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+#section6cards{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.sec6card{
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+#section6cards>.sec6card:nth-child(1),#section6cards>.sec6card:nth-child(2){
+    border-right: 1px solid #838383;;
+}
+.sec6card img{
+ width: 90%;
+ border-radius: 10px;
+}
+.sec6card p{
+ font-size: 18px;
+ width: 90%;
+}
+.sec6card h2{
+ font-size: 28px;
+ width: 90%;
+}
+#section6 h1{
+    font-size: 50px;
+    display: flex;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#footer{
+    background-color: #f9f9f9;
+    height: 520px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+#footer1{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #838383;
+    margin: 30px auto 30px auto;
+}
+#f1p1{
+    display:grid;
+    grid-template-columns: repeat(2,1fr); 
+}
+#f1p1d2{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    margin: auto;
+}
+#f1p2{
+    display:grid;
+    grid-template-columns: 35% 65%; 
+}
+#f1p2d1,#f1p1d{
+   font-size: 40px;
+}
+#f1p2d1{
+    border-left: 1px solid #838383;
+}
+#f1p1d{
+    padding: 20px 0px 20px 0px;
+}
+#f1p2d1{
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+#f1p2i{
+    width: 70%;
+    height: 100%;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-right: none;
+}
+#f1p2i~div{
+    font-size: 50px;
+    position: relative;
+    right: 40px;
+    z-index: 2;
+}
+#f1p2d2{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: auto;
+}
+.f1p1d2d{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    height: 180%;
+    align-items: center;
+    border-radius: 15px;
+}
+#footer2{
+    display:grid;
+    grid-template-columns: 40% 60%; 
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #838383;;
+    padding: 10px 0px 80px 0px;
+}
+
+#f2p1i{
+    width: 50%;
+}
+#f2p1dp{
+    width: 60%;
+    color: #838383;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#f2p2{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+}
+.f2p2d p{
+    color: #838383;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#footer3{
+    display:grid;
+    grid-template-columns: 55% 45%; 
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    margin: 30px auto 30px auto;
+}
+#f3p1{
+    color: #838383;
+}
+#f3p2{
+    display:grid;
+    grid-template-columns: 40% 20% 20% 20%; 
+    width: 100%;
+    margin: auto;
+    justify-content: space-between; 
+    color: #838383;
+}
+#f3p2d{
+    align-self: center;
+}
+</style>
+<body>
+    <hr>
+    <div id="navbardiv">
+        <div id="tripbli">
+            <a href="#logo"><img id="logoimg" src="./asset/TripBliss.png"/></a>
+        </div>
+        <div id="navmid">
+            <div id="navmid1">  
+                <p>|</p>             
+                <h4><a href="#home">Home</a></h4>
+                <h4><a href="#about">About Us</a></h4>
+            </div>
+            <div id="navmid2">
+                <p>|</p>
+                <h4><a href="#destinations">Destination</a></h4>
+                <h4><a href="#features">Features</a></h4>
+            </div>
+            <div id="navmid3">
+                <p>|</p>
+                <h4><a href="#pricing">Pricing</a></h4>
+                <h4><a href="#reviews">Reviews</a></h4>
+            </div>
+            </div>
+        <div id="contactlogo">
+            <h3>Contact Us</h3>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>
+            </div>
+        </div>
+    </div>
+    <div id="section1">
+      <h1>Lifelong Memories Just A Few Days Away</h1>
+      <div id="section1btn">
+        <button>Join With Us</button>
+        <button>Learn More ></button>
+      </div>
+    <div id="travelguysec">
+        <img id="travelguyimg" src="./asset/travelguy.png"/>
+        <div id="travelguysec1">
+            <div class="options">
+                <p>01</p>
+                <img src="./asset/trek.jpg"/>
+                <div>
+                <h2>Trekking</h2>
+                <p>Climbing the tallest mountain in Europe!</p>
+                </div>
+            </div>
+            <div class="options">
+                <p>02</p>
+                <img src="./asset/rafting.jpg"/>
+                <div>
+                    <h2>Rafting</h2>
+                    <p>Let's meet the wildest river and go rafting on them!</p>
+                </div>
+            </div>
+            <div class="options">
+                <p>03</p>
+                <img src="./asset/surfing.jpeg"/>
+                <div>
+                <h2>Windsurfing</h2>
+                <p>Didnt see the tallest wave on a rainy day?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="section2">
+        <h1>Discover the touch of Nature</h1>
+            <div id="sec2cards">
+                <div class="sec2card">
+                  <div class="card-content">
+                    <img src="./asset/tanzania.png"></img>
+                    <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Tanzania</h2>
+                      </div>
+                  </div>
+                </div>
+                <div class="sec2card">
+                  <div class="card-content">
+                    <img src="./asset/colombia.png">
+                    <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Colombia</h2>
+                      </div>
+                  </div>
+                </div>
+                <div class="sec2card">
+                    <div class="card-content">
+                      <img src="./asset/baharin.png">
+                      <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Baharin</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sec2card">
+                    <div class="card-content">
+                      <img src="./asset/mauritius.png">
+                      <div class="image-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <h2>Mauritius</h2>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+    </div>
+    <div id="section3">
+        <h1>Our Features</h1>
+        <div id="sec3cards">
+            <div class="sec3card">
+                 <img src="./asset/dynamic.png"/>
+                 <h3>Dynamic Packaging</h3> 
+                 <p>Dynamic packaging is a method used in package holiday bookings to enable consumers to build their package</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/instant.png"/>
+                <h3>Instant Itinerary</h3> 
+                <p>Get a verifiable Flight and Hotel itinerary in less than 5 minutes for your next Visa travel application to the place</p>
+           </div>
+           <div class="sec3card">
+            <img src="./asset/vendor.png"/>
+            <h3>Vendor Extant</h3> 
+            <p>An integrated decision model for cloud vendor selection using...of the model are analysed by using sensitivity analysis</p>
+            </div>
+            <div class="sec3card">
+             <img src="./asset/multiple.png"/>
+             <h3>Multiple Verticals</h3> 
+             <p>A vertical, also known as a sales vertical or vertical market, is the industry that a company's offerings are specifically</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/blogging.png"/>
+                <h3> Blogging Platform</h3> 
+                <p>We recommend using a platform, such as Wix or Squarespace.Neither requires any coding knowledge and each provides</p>
+            </div>
+            <div class="sec3card">
+                <img src="./asset/language.png"/>
+                <h3>Language Locales</h3> 
+                <p>A locale defines a user language and contains languages and country related parameters.Many languages</p>
+               </div>
+        </div>
+    </div>
+    <div id="section4">
+        <div id="sec4left">
+            <h1>What services we provide</h1>
+            <div>
+                <h2>01. Travel Plan</h2>
+                <p>Travel plans are not really an instrument themselves but a delivery mechanism or strategy for other mostly.</p>
+            </div>
+            <div>
+                <h2>02. Flights Booking</h2>
+                <p>Discover your next dream destination, Find deals on domestic and international flights.</p>
+            </div>
+            <div>
+                <h2>03. Accomodation</h2>
+                <p>Lodging,food, and services or traveling space and related services, Usually used in plural.</p>
+            </div>
+        </div>
+        <div id="sec4right">
+            <img src="./asset/sec4img.png"/>
+        </div>
+    </div>
+    <div id="section5">
+        <div id="sec5left">
+            <div>
+                <img src="./asset/sec5guy.png"/>
+                <div id="sec5guybg1"></div>
+            </div>
+        </div>
+        <div id="sec5right">
+            <h1>Plan easy,Play less & experience more</h1>
+            <div id="sec5rightbtm">
+                <div id="page-wrap">
+                    <p class="badge">
+                        <span class="char1">T</span>
+                        <span class="char2">h</span>
+                        <span class="char3">e</span>
+                        <span class="char4"> </span>
+                        <span class="char5">l</span>
+                        <span class="char6">a</span>
+                        <span class="char7">t</span>
+                        <span class="char8">e</span>
+                        <span class="char9">s</span>
+                        <span class="char10">t</span>
+                        <span class="char11"> </span>
+                        <span class="char12">t</span>
+                        <span class="char13">r</span>
+                        <span class="char14">v</span>
+                        <span class="char15">e</span>
+                        <span class="char16">l</span>
+                        <span class="char17"> </span>
+                        <span class="char18">n</span>
+                        <span class="char19">e</span>
+                        <span class="char20">w</span>
+                        <span class="char21">s</span>
+                        <span class="char22"> </span>
+                        <span class="char23">g</span>
+                        <span class="char24">u</span>
+                        <span class="char25">i</span>
+                        <span class="char26">d</span>
+                        <span class="char27">e</span>
+                        <span class="char28">s</span>
+                        <span class="char29"> </span>
+                        <span class="char30">v</span>
+                        <span class="char31">a</span>
+                        <span class="char32">c</span>
+                        <span class="char33">a</span>
+                        <span class="char34">t</span>
+                        <span class="char35">i</span>
+                        <span class="char36">o</span>
+                        <span class="char37">n</span>
+                        <span class="char38"> </span>
+                        <span class="char39">t</span>
+                        <span class="char40">i</span>
+                        <span class="char41">p</span>
+                        <span class="char42">s</span>
+                </p>
+                </div>
+                <p>Traveling is important in life because it will open you to a new way of living and being.You will experience
+                     new connection with people and places and immerse in different cultures,which can help widen your perspective</p>
+            </div>
+        </div>
+    </div>
+    <div id="section6">
+        <h1>Revolutionising the ways we travel</h1>
+        <div id="section6cards">
+            <div class="sec6card">
+                <img src="./asset/hotairballons.png"/>
+                <h2>Custom Booking</h2>
+                <p>Custom booking window feature allows you to restrict the available dates for booking for particular duration</p>
+            </div>
+            <div class="sec6card">
+                <img src="./asset/beachhut.png"/>
+                <h2>End-to-End Messaging</h2>
+                <p>If you are looking for a messaging app that offers secure end-to-end encryption.here's a roundup of the best apps you can use.</p>
+            </div>
+            <div class="sec6card">
+                <img src="./asset/beachumbrella.png"/>
+                <h2>Instant Iteinerary</h2>
+                <p>Get a verifiable Flight and Hotel itinerary in less than 5 minutes for your next Visa travel application to the place</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer1">
+        <div id="f1p1">
+        <div id="f1p1d">Leading the way in adventure</div>
+        <div id="f1p1d2">
+            <div class="f1p1d2d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></div>
+            <div class="f1p1d2d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></div>
+            <div class="f1p1d2d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></div>
+            <div class="f1p1d2d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></div>
+        </div>
+        </div>
+        <div id="f1p2">
+        <div id="f1p2d1">Join our Newsletter</div>
+        <div id="f1p2d2">
+            <input id="f1p2i" placeholder="Enter your e-mail"/>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div id="footer2">
+         <div id="f2p1">
+            <img id="f2p1i" src="./asset/logofooter.png"/>
+            <p id="f2p1dp">Travel plans are not really an instrument themselves but a delivery mechanism or strategy for other mostly</p>
+         </div>
+         <div id="f2p2">
+            <div class="f2p2d">
+                <h2>CONTACT</h2>
+                <p>+1 313 456 6785</p>
+                <p>info@travelo.com</p>
+                <p>support@travelo.com</p>
+             </div>
+             <div class="f2p2d">
+                <h2>COMPANY</h2>
+                <p>About us</p>
+                <p>Features</p>
+                <p>Careers</p>
+             </div>
+             <div class="f2p2d">
+                <h2>RESOURCE</h2>
+                <p>Press info</p>
+                <p>Customers</p>
+                <p>Reviews</p>
+             </div>
+         </div>
+        </div>
+        <div id="footer3">
+            <div id="f3p1">@2023 tripbliss | All Rights Reserved</div>
+            <div id="f3p2">
+                <div id="f3p2d">We Accept Payment:</div>
+                <img src="./asset/stripe.png"/>
+                <img src="./asset/paypal.png"/>
+                <img src="./asset/payoneer.png"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/6374a7542c.js" crossorigin="anonymous"></script>
+</html>
