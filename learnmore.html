@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn More - TripBliss</title>
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.card p {
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <h1>Learn More</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/location-symbol-beautiful-beach_23-2149764155.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"alt="Destination Image">
+        <div class="card-content">
+          <h2>Explore New Destinations</h2>
+          <p>Discover our wide range of destinations across the globe. From pristine beaches to breathtaking mountains, there's something for everyone. Embark on a journey of a lifetime and create unforgettable memories.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/beautiful-girl-traditional-carpet-shop-goreme-city-cappadocia-turkey_335224-554.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Cultural Experience Image">
+        <div class="card-content">
+          <h2>Authentic Cultural Experiences</h2>
+          <p>Immerse yourself in the local culture and traditions of each destination. Our expert guides will take you on a journey to explore hidden gems and interact with local communities. Get ready to experience the true essence of each place.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/hiking-men-conquer-mountain-peak-adventure-awaits-generative-ai_188544-7877.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Adventure Image" alt="Adventure Image">
+        <div class="card-content">
+          <h2>Adventure and Thrill</h2>
+          <p>Seek adrenaline-pumping adventures and thrilling activities. From hiking majestic peaks to diving into crystal-clear waters, our adventure packages cater to the adrenaline junkie in you. Get ready for an adventure like no other.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
