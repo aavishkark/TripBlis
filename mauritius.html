@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Visit Mauritius - TripBliss</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3755ff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+main {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.card {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.card p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.card img {
+  width: 20%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Visit Mauritius</h1>
+  </header>
+
+  <main>
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="https://img.freepik.com/free-photo/pileh-blue-lagoon-phi-phi-island-thailand_231208-1487.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/free-photo/landscape-railay-beach-sunrise-krabi-thailand_335224-1398.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/beautiful-nature-landscapes-mauritius-island-rempart-mountains-view-from-tamarin-bay_287743-1.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Image 3">
+      </div>
+    </div>  
+    <div class="card">
+      <h2>Explore the Stunning Beaches</h2>
+      <p>Discover the breathtaking beaches of Mauritius with their crystal-clear turquoise waters and pristine white sand. Whether you're seeking relaxation or adventure, the beaches offer a range of activities such as snorkeling, scuba diving, and water sports. Don't miss the iconic Belle Mare Beach, Trou aux Biches, and Flic en Flac.</p>
+      <img src="https://img.freepik.com/free-photo/beautiful_1203-2633.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Mauritius Beaches">
+    </div>
+
+    <div class="card">
+      <h2>Experience the Vibrant Culture</h2>
+      <p>Immerse yourself in the vibrant culture of Mauritius. Visit the bustling capital city of Port Louis, where you can explore the Central Market and taste local street food. Don't miss the chance to witness traditional Sega dance performances and learn about the island's multicultural heritage.</p>
+      <img src="https://img.freepik.com/premium-photo/two-indians-from-pataxa-tribe_63135-1385.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais" alt="Mauritius Culture">
+    </div>
+
+    <div class="card">
+      <h2>Discover Natural Wonders</h2>
+      <p>Mauritius is home to stunning natural wonders. Explore the Seven Colored Earths in Chamarel, a unique geological formation with vibrant hues. Discover the beauty of the Black River Gorges National Park, where you can hike through lush forests and encounter rare endemic bird species.</p>
+      <img src="https://img.freepik.com/free-photo/beautiful-scenery-chamarel-waterfall-mauritius-cloudy-sky_181624-19823.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Mauritius Nature">
+    </div>
+  </main>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides.forEach(function(slide) {
+      slide.style.display = "none";
+    });
+    slides[n].style.display = "block";
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  }
+  showSlide(currentSlide);
+  setInterval(nextSlide, 2000);
+});
+</script>
+</html>

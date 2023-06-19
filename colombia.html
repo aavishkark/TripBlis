@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Colombia - TripBliss</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3755ff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+main {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.card {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.card p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.card img {
+  width: 20%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+</style>
+<body>
+  <header>
+    <h1>Visit Colombia</h1>
+  </header>
+  <main>
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="https://ik.imgkit.net/3vlqs5axxjf/TAW/ik-seo/uploadedImages/All_Gateways/Cen-South_America/Features/Bogota%20Travel%20Guide%20Hero/Bogota-Travel-Guide-Hero.jpg?tr=w-1008%2Ch-567%2Cfo-auto" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="https://www.kuodatravel.com/wp-content/uploads/2021/09/the-lost-city-colombia-10-min-1.png" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="https://www.tailor-made-travels.com/wp-content/uploads/adobestock-267256050.jpeg" alt="Image 3">
+      </div>
+    </div>  
+    <div class="card">
+      <h2>Discover the Vibrant City of Bogotá</h2>
+      <p>Explore the energetic capital city of Colombia, Bogotá. Immerse yourself in the rich culture and history as you stroll through the colonial streets of La Candelaria. Visit iconic landmarks like the Plaza de Bolívar and the impressive Museo del Oro (Gold Museum).</p>
+      <img src="https://trainsplanesandtuktuks.com/Wordpress/wp-content/uploads/2019/02/DSC02682-edited.jpg" alt="Bogotá City">
+    </div>
+
+    <div class="card">
+      <h2>Marvel at the Beauty of Cartagena</h2>
+      <p>Experience the charm of Cartagena, a coastal gem with its colorful colonial architecture and Caribbean vibes. Wander through the narrow cobblestone streets of the walled city, explore the Castillo San Felipe de Barajas, and relax on the pristine beaches of Playa Blanca.</p>
+      <img src="https://img.freepik.com/free-photo/architecture-outdoors-blend-historic-mediterranean-city-generative-ai_188544-7957.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais" alt="Cartagena City">
+    </div>
+
+    <div class="card">
+      <h2>Explore the Coffee Region</h2>
+      <p>Indulge in the aromatic world of Colombian coffee in the coffee region. Visit picturesque coffee plantations, learn about the coffee-making process, and savor the flavors of freshly brewed coffee. Immerse yourself in the lush landscapes and enjoy outdoor activities like hiking and birdwatching.</p>
+      <img src="https://www.comunicaffe.com/wp-content/uploads/2015/06/colombia-coffee-picker-exports.jpeg" alt="Colombian Coffee Region">
+    </div>
+  </main>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides.forEach(function(slide) {
+      slide.style.display = "none";
+    });
+    slides[n].style.display = "block";
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  }
+  showSlide(currentSlide);
+  setInterval(nextSlide, 2000);
+});
+</script>
+</html>

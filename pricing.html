@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+</head>
+<style>
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #3755ff;
+    margin: 0%;
+}
+header{
+    text-align: center;
+}
+#holidayContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #3755ff;
+
+}
+.card {
+  width: 300px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card .content {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+#functions {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#filter {
+  display: flex;
+  align-items: center;
+}
+
+#filter input[type="number"],
+#search {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#filter-btn {
+  padding: 8px 16px;
+  background-color: #4c61af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sort {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ 
+header {
+    background-color: #393daa;
+    color: #fff;
+    padding: 20px;
+}
+ header h1 {
+    margin: 0;
+}
+.book-btn{
+   background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#functions{
+  padding: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Pricing and Packages</h1>
+    </header>
+    <div id="functions"><div id="filter">
+      <input type="number" id="lower" />
+      <input type="number" id="upper" />
+      <button id="filter-btn">Filter</button>
+    </div>
+    <select id="sort">
+      <option value="">Sort By Price</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <div>
+      <input id="search" placeholder="Search by destination"/>
+    </div></div>
+      <div id="holidayContainer"></div>
+        </body>
+        <script>
+var holidayPackages = [
+  {
+    destination: "Italy",
+    duration: "7 days",
+    price: 112500,
+    description: "Explore the beauty of Italy with a 7-day holiday package. Visit iconic landmarks, taste delicious cuisine, and immerse yourself in the rich culture of this Mediterranean gem.",
+    image: "https://img.freepik.com/premium-photo/pisa-italy-june-29-2018-panoramic-view-leaning-tower-pisa-tower-pisa-torre-di-pisa-is-campanile-piazza-del-miracoli-freestanding-bell-tower-cathedral-pisa-city_510351-5175.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.1.400742007.1686804320&semt=ais"
+  },
+  {
+    destination: "Thailand",
+    duration: "10 days",
+    price: 212000,
+    description: "Embark on a 10-day adventure in Thailand. Experience the vibrant city life of Bangkok, relax on pristine beaches, and discover the ancient temples of Chiang Mai.",
+    image: "https://img.freepik.com/free-photo/wat-arun-temple-twilight-bangkok-thailand_335224-772.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Australia",
+    duration: "14 days",
+    price: 312000,
+    description: "Discover the wonders of Australia with a 14-day holiday package. Explore the Great Barrier Reef, hike in the Outback, and experience the cosmopolitan vibe of Sydney.",
+    image: "https://img.freepik.com/free-photo/sydney-opera-house-near-beautiful-sea-clear-blue-sky_181624-8472.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Greece",
+    duration: "9 days",
+    price: 181200,
+    description: "Indulge in the beauty of Greece with a 9-day holiday package. Visit ancient ruins in Athens, relax on picturesque islands, and savor delicious Mediterranean cuisine.",
+    image: "https://img.freepik.com/free-photo/budapest-hungary_181624-9612.jpg?size=626&ext=jpg"
+  },
+  {
+    destination: "Bali",
+    duration: "7 days",
+    price: 120120,
+    description: "Escape to paradise with a 7-day holiday package in Bali. Enjoy stunning beaches, explore lush rice terraces, and immerse yourself in the unique Balinese culture.",
+    image: "https://img.freepik.com/free-photo/landmark-pagoda-doi-inthanon-national-park-chiang-mai-thailand_335224-779.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "New Zealand",
+    duration: "12 days",
+    price: 250110,
+    description: "Experience the breathtaking landscapes of New Zealand with a 12-day holiday package. Explore the stunning fjords, hike in national parks, and indulge in adventure activities.",
+    image: "https://img.freepik.com/free-photo/landscape-lake-pukaki-pukaki-new-zealand-surrounded-with-snowy-mountains_181624-26720.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais"
+  },
+  {
+    destination: "Spain",
+    duration: "10 days",
+    price: 112900,
+    description: "Discover the vibrant culture of Spain with a 10-day holiday package. Explore the historic streets of Barcelona, bask in the sun on the Costa del Sol, and savor tapas in Madrid.",
+    image: "https://img.freepik.com/premium-photo/madrid-city-center-gran-vis-spain_119101-382.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Maldives",
+    duration: "7 days",
+    price: 312500,
+    description: "Unwind in paradise with a 7-day holiday package in the Maldives. Relax on pristine beaches, snorkel in crystal-clear waters, and enjoy luxury accommodation in overwater bungalows.",
+    image: "https://img.freepik.com/free-photo/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand_335224-1094.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Iceland",
+    duration: "8 days",
+    price: 280012,
+    description: "Experience the wonders of Iceland with an 8-day holiday package. Witness the Northern Lights, explore glaciers and waterfalls, and relax in natural hot springs.",
+    image: "https://img.freepik.com/free-photo/kirkjufell-sunrise-iceland-beautiful-landscape_335224-685.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Mexico",
+    duration: "9 days",
+    price: 171200,
+    description: "Immerse yourself in the vibrant culture of Mexico with a 9-day holiday package. Visit ancient Mayan ruins, relax on stunning beaches, and savor authentic Mexican cuisine.",
+    image: "https://img.freepik.com/free-photo/closeup-shot-chichen-itza-mexico-clear-blue-sky_181624-12834.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Switzerland",
+    duration: "7 days",
+    price: 221200,
+    description: "Indulge in the beauty of Switzerland with a 7-day holiday package. Explore picturesque alpine villages, ride scenic trains, and marvel at the majestic Swiss Alps.",
+    image: "https://img.freepik.com/free-photo/amazing-autumn-scenery-santa-maddalena-village-with-church-colorful-trees-meadows-rising-sun-rays-dolomite-alps-italy_661209-245.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "South Africa",
+    duration: "11 days",
+    price: 321200,
+    description: "Embark on an adventure in South Africa with an 11-day holiday package. Go on thrilling safaris, explore vibrant cities, and enjoy stunning coastal landscapes.",
+    image: "https://img.freepik.com/free-photo/group-elephants-walking-dry-grass-wilderness_181624-18109.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais"
+  },
+  {
+    destination: "Canada",
+    duration: "10 days",
+    price: 260120,
+    description: "Discover the beauty of Canada with a 10-day holiday package. Explore the Rocky Mountains, visit charming cities, and experience the unique Canadian wilderness.",
+    image: "https://img.freepik.com/free-photo/toronto-skyline-from-park_649448-3488.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "India",
+    duration: "14 days",
+    price: 180120,
+    description: "Immerse yourself in the vibrant culture of India with a 14-day holiday package. Visit ancient temples, experience bustling markets, and savor the diverse cuisine.",
+    image: "https://img.freepik.com/free-photo/taj-mahal-agra-india_53876-47058.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Kenya",
+    duration: "8 days",
+    price: 280120,
+    description: "Embark on a safari adventure in Kenya with an 8-day holiday package. Witness the Great Migration, spot magnificent wildlife, and immerse yourself in Maasai culture.",
+    image: "https://img.freepik.com/premium-photo/masai-tribe-african-savannah-created-with-generative-ai-technology_545448-15430.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.1.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Peru",
+    duration: "10 days",
+    price: 212100,
+    description: "Explore the wonders of Peru with a 10-day holiday package. Visit the ancient city of Machu Picchu, discover the Amazon rainforest, and experience the vibrant culture of Lima.",
+    image: "https://img.freepik.com/free-photo/bird-s-eye-view-breathtaking-mountain-machu-picchu-peru_181624-10826.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Egypt",
+    duration: "9 days",
+    price: 230012,
+    description: "Unveil the mysteries of Egypt with a 9-day holiday package. Discover ancient pyramids, sail the Nile River, and explore the vibrant markets of Cairo.",
+    image: "https://img.freepik.com/free-photo/young-woman-visiting-pyramids-egypt_181624-45406.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Croatia",
+    duration: "7 days",
+    price: 112600,
+    description: "Experience the beauty of Croatia with a 7-day holiday package. Explore the historic city of Dubrovnik, relax on stunning Adriatic beaches, and discover charming coastal towns.",
+    image: "https://img.freepik.com/free-photo/high-angle-view-split-dalmatia-croatia_181624-27460.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Brazil",
+    duration: "12 days",
+    price: 281200,
+    description: "Immerse yourself in the vibrant culture of Brazil with a 12-day holiday package. Explore the vibrant city of Rio de Janeiro, visit the iconic Iguazu Falls, and relax on beautiful beaches.",
+    image: "https://img.freepik.com/free-photo/landscape-rio-de-janeiro-surrounded-by-sea-blue-sky-brazil_181624-17265.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "Malaysia",
+    duration: "9 days",
+    price: 121900,
+    description: "Discover the diverse landscapes of Malaysia with a 9-day holiday package. Explore bustling cities, trek through lush rainforests, and relax on pristine tropical islands.",
+    image: "https://img.freepik.com/premium-photo/kuala-lumpur-skyline-morning-malaysia-kuala-lumpur-is-capital-city-malaysia_73503-1211.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.1.400742007.1686804320&semt=sph"
+  },
+  {
+    destination: "United States",
+    duration: "14 days",
+    price: 123500,
+    description: "Embark on an epic journey across the United States with a 14-day holiday package. Visit iconic cities, explore national parks, and experience the diverse culture of America.",
+    image: "https://img.freepik.com/premium-photo/statue-liberty-with-one-world-trade-building-center-hudson-river-new-york-cityscape-background-landmarks-lower-manhattan-new-york-city_1439-203.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph"
+  },
+  {
+  destination: "Argentina",
+  duration: "20 days",
+  image: "https://img.freepik.com/premium-photo/monument-buenos-aires-argentina_134785-11695.jpg?w=1060",
+  description: "Discover the breathtaking landscapes, vibrant cities, and rich culture of Argentina.",
+  price: 249999
+},
+{
+  destination: "Saudi Arabia",
+  duration: "10 days",
+  image: "https://img.freepik.com/free-photo/view-famous-abu-dhabi-sheikh-zayed-mosque-by-night-uae_268835-1065.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais",
+  description: "Experience the ancient wonders, traditional hospitality, and modern marvels of Saudi Arabia.",
+  price: 191799
+},
+{
+  destination: "Turkey",
+  duration: "15 days",
+  image: "https://img.freepik.com/free-photo/haghia-sophia-istanbul-turkey_661209-205.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph",
+  description: "Immerse yourself in the fascinating history, delicious cuisine, and stunning landscapes of Turkey.",
+  price: "221599"
+}
+];
+const holidayPackages1=holidayPackages
+var container = document.getElementById("holidayContainer");
+let input1=document.getElementById("lower")
+let input=document.getElementById("search")
+    let input2=document.getElementById("upper")
+    let filterbtn=document.getElementById("filter-btn")
+    let selectref=document.getElementById("sort")
+    filterbtn.addEventListener(("click"),()=>{
+      let filtered=holidayPackages.filter((e)=>{
+         if(e.price>=input1.value && e.price<=input2.value){
+             return e
+         }
+      })
+      Display(filtered)
+    })
+selectref.addEventListener("change",(e)=>{
+  console.log(holidayPackages1)
+  let sortedPackages = holidayPackages.sort((a, b) => {
+  if (selectref.value == "asc") {
+    return parseFloat(a.price) - parseFloat(b.price);
+  }
+  else if(selectref.value == "desc"){
+    return parseFloat(b.price) - parseFloat(a.price);
+  }
+  else if(selectref.value == ""){
+    return 0
+  }
+});
+Display(sortedPackages)
+})
+input.addEventListener("input",()=>{
+         let searchfilt= holidayPackages.filter((element)=>{
+          console.log(element.destination)
+          if(element.destination.toUpperCase().includes(input.value.toUpperCase())===true){
+              return element
+            }
+          })
+          Display(searchfilt)    
+       })
+
+  function Display(data){
+    container.innerHTML=""
+  data.forEach((e)=>{
+  var card = document.createElement("div");
+  card.classList.add("card");
+  var image = document.createElement("img");
+  image.src = e.image;
+  image.alt = e.destination;
+  card.appendChild(image);
+  var content = document.createElement("div");
+  content.classList.add("content");
+  var heading = document.createElement("h2");
+  heading.textContent = e.destination;
+  content.appendChild(heading);
+  var duration = document.createElement("p");
+  duration.textContent = "Duration: " + e.duration;
+  content.appendChild(duration);
+  var price = document.createElement("p");
+  price.textContent = "Price:Rs " + e.price;
+  content.appendChild(price);
+  var description = document.createElement("p");
+  description.textContent = e.description;
+  content.appendChild(description);
+  var btn=document.createElement('button')
+  btn.innerText="Book"
+  btn.setAttribute('class','book-btn')
+  btn.addEventListener('click',()=>{
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+        let filtered=users.filter((ele)=>{
+        if(ele.flag==true){
+          ele['booking']=e
+          ele['person']=1
+            return ele
+        }
+        else{
+          return ele  
+        }
+    })
+    console.log(filtered)
+     localStorage.removeItem('users')
+     localStorage.setItem("users", JSON.stringify(filtered));
+     window.location.href = "booking.html"; 
+  })
+  content.appendChild(btn)
+  card.appendChild(content);
+  container.appendChild(card);
+      })
+
+    }
+Display(holidayPackages)
+       </script>
+        </html>

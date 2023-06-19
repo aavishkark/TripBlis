@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Iceland - TripBliss</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3755ff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+main {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.card {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.card p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.card img {
+  width: 20%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Visit Iceland</h1>
+  </header>
+  <main>
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="https://img.freepik.com/free-photo/seljalandsfoss-waterfall-during-sunset-beautiful-waterfall-iceland_335224-596.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/aurora-borealis-lofoten-islands-norway_159067-4.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=sph" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/free-photo/vik-basalt-columns-black-sand-beach-iceland_335224-612.jpg?w=1060&t=st=1687119598~exp=1687120198~hmac=c039069638d3044fcb7c9a4ed343522ec181699840974b9f6f5f2a7e2bb4253c" alt="Image 3">
+      </div>
+    </div>  
+    <div class="card">
+      <h2>Explore the Stunning Golden Circle</h2>
+      <p>Discover Iceland's famous Golden Circle, a popular tourist route that includes breathtaking natural wonders such as the Gullfoss waterfall, Geysir geothermal area, and Thingvellir National Park. Experience the unique landscapes and geological phenomena that make Iceland truly remarkable.</p>
+      <img src="https://images.prismic.io/visiticeland/ed0a8ef1-1749-44cc-8a75-0e60c573cd2e_GoldenCircle_Kort.jpg?auto=compress,format" alt="Golden Circle">
+    </div>
+    
+    <div class="card">
+      <h2>Witness the Magnificent Jökulsárlón Glacier Lagoon</h2>
+      <p>Marvel at the stunning Jökulsárlón Glacier Lagoon, located in southeast Iceland. Experience the breathtaking sight of icebergs floating in the serene lagoon, surrounded by awe-inspiring landscapes. Take a boat tour or walk along the black sand beach nearby for an unforgettable experience.</p>
+      <img src="https://img.freepik.com/free-photo/iceberg-ocean-greenland_181624-13710.jpg?size=626&ext=jpg&uid=R106748978&ga=GA1.2.400742007.1686804320&semt=ais" alt="Jökulsárlón Glacier Lagoon">
+    </div>
+    
+    <div class="card">
+      <h2>Relax in the Blue Lagoon Spa</h2>
+      <p>Indulge in relaxation at the famous Blue Lagoon Spa, a geothermal spa located in a lava field in southwestern Iceland. Enjoy bathing in the mineral-rich geothermal waters renowned for their healing properties. Pamper yourself with spa treatments and immerse in the serene atmosphere.</p>
+      <img src="https://i.pinimg.com/originals/3c/13/9a/3c139a0362234adb5d43d3530f72ed63.jpg" alt="Blue Lagoon Spa">
+    </div>
+    
+  </main>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides.forEach(function(slide) {
+      slide.style.display = "none";
+    });
+    slides[n].style.display = "block";
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  }
+  showSlide(currentSlide);
+  setInterval(nextSlide, 2000);
+});
+</script>
+</html> 
+

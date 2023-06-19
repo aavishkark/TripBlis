@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    .card {
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 400px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+        color: #333;
+    }
+
+    .card label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .card input[type="number"] {
+        width: 50px;
+    }
+
+    .card input[type="date"] {
+        width: 100%;
+    }
+
+    .card button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .card button:hover {
+        background-color: #0056b3;
+    }
+    #date{
+        width: 40%;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+        .card {
+            max-width: 90%;
+        }
+    }
+</style>
+<body>
+    <header>
+        <h1>Booking</h1>
+    </header>
+    <div class="card">
+        <h2>Your Booking details</h2>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" />
+        </div>
+        <div>
+            <label for="package">Package Name:</label>
+            <input type="text" id="package" />
+        </div>
+        <div>
+            <label for="person">Number of person:</label>
+            <input type="number" id="person" value="1" min="1" />
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" />
+        </div>
+        <div>
+            <label for="total">Total:</label>
+            <p id="total"></p>
+        </div>
+        <button>Confirm Booking</button>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        let filtered=users.filter((ele)=>{
+        if(ele.flag==true){
+            return ele
+        }
+        else{
+              
+        }
+    })
+    console.log(filtered)
+    let package=document.getElementById('package')
+    let person=document.getElementById('person')
+    let total=document.getElementById('total')
+    let btn=document.querySelector('button')
+    let date=document.getElementById('date')
+    let name=document.getElementById('name')
+    let email=document.getElementById('email')
+    
+    name.value=filtered[0].name
+    email.value=filtered[0].email
+    package.value=filtered[0].booking.destination
+    total.innerText= "RS "+person.value*filtered[0].booking.price
+
+    person.addEventListener('input',()=>{
+        total.innerText="RS "+person.value*filtered[0].booking.price
+    })
+    btn.addEventListener("click",()=>{
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        let filtered=users.filter((ele)=>{
+        if(ele.flag==true){
+            ele['person']=person.value
+            ele['date']=date.value
+            return ele
+        }
+        else{
+            return ele
+        }
+    })
+    localStorage.removeItem('users')
+     localStorage.setItem("users", JSON.stringify(filtered));
+     window.location.href = "success.html"; 
+    })
+    });
+    </script>
+</body>
+</html>
+
